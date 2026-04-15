@@ -22,7 +22,7 @@ import com.product.ecommerce.repository.PricesRespository;
 
 import tools.jackson.databind.ObjectMapper;
 
-@RequestMapping("/api")
+@RequestMapping("/ecommerce/api")
 public class EcommerceController {
 	
 	private final ObjectMapper mapper = new ObjectMapper();
@@ -30,7 +30,7 @@ public class EcommerceController {
 	@Autowired
 	PricesRespository pricesRepository;
 	
-	@GetMapping("/product")
+	@GetMapping("/productinfo")
 	public ResponseEntity<String> getProductInfoPrice(@RequestParam String date, @RequestParam Long productId, @RequestParam String brandId) {
 		
 		String result = validRequiredParameters(date, productId, brandId);
