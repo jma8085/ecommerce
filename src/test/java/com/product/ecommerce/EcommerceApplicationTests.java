@@ -29,28 +29,28 @@ class EcommerceApplicationTests {
 	void dateFormatProductoInfoTest() throws Exception {
 		mockMvc.perform(get(baseAPIUri + "?date=2020-06-14-10:00:00&productId=35455&brandId=1"))
 		.andExpect(status().isBadRequest())
-		.andExpect(content().string("Param date is malformed"));
+		.andExpect(content().string("Parameter 'date' is malformed"));
 	}
 	
 	@Test
 	void dateRequiredProductoInfoTest() throws Exception {		
 		mockMvc.perform(get(baseAPIUri + "?productId=3545&brandId=1"))
 		.andExpect(status().isBadRequest())
-		.andExpect(content().string("Param date is required"));
+		.andExpect(content().string("Parameter 'date' is required"));
 	}
 
 	@Test
 	void branIdRequiredProductoInfoTest() throws Exception {		
 		mockMvc.perform(get(baseAPIUri + "?date=2020-06-14-10.00.00&productId=35455"))
 		.andExpect(status().isBadRequest())
-		.andExpect(content().string("Param brandId is required"));
+		.andExpect(content().string("Parameter 'brandId' is required"));
 	}
 	
 	@Test
 	void productIdRequiredProductoInfoTest() throws Exception {	
 		mockMvc.perform(get(baseAPIUri + "?date=2020-06-14-10.00.00&brandId=1"))
 		.andExpect(status().isBadRequest())
-		.andExpect(content().string("Param productId is required"));
+		.andExpect(content().string("Parameter 'productId' is required"));
 	}
 	
 	@Test

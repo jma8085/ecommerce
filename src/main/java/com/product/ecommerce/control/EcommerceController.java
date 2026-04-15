@@ -42,7 +42,7 @@ public class EcommerceController {
 		Date dateIn = validAndParseDate(date);
 		
 		if (dateIn == null) {
-			return new ResponseEntity<>("Param 'date' is malformed", HttpStatus.BAD_REQUEST);
+			return new ResponseEntity<>("Parameter 'date' is malformed", HttpStatus.BAD_REQUEST);
 		}
 		
 		List<Prices> prices = pricesRepository.findByProductIdBrandIdOrderByPriceListAsc(productId, brandId);
@@ -58,7 +58,7 @@ public class EcommerceController {
 	
 	private String validRequiredParameters(String date, Long productId, String brandId) {
 		String var = date==null? "date" : productId == null? "productId" : brandId == null? "branId" : null;
-		return var == null? null : "Param " + var + " is required";
+		return var == null? null : "Parameter " + var + " is required";
 	}
 	
 	private Date validAndParseDate(String date) {
