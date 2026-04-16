@@ -1,2 +1,2 @@
-INSERT INTO PRICES (brandId, startDate, endDate, priceList, productId, priority, price, currency)
-SELECT * FROM CSVREAD('classpath:static/prices_.csv');
+
+INSERT INTO PRICES (PRICE_ID, BRAND_ID, START_DATE, END_DATE, PRICE_LIST, PRODUCT_ID, PRIORITY, PRICE, CURRENCY) SELECT * FROM CSVREAD('classpath:prices.csv');

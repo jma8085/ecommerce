@@ -2,6 +2,8 @@ package com.product.ecommerce.persistence;
 
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -9,19 +11,28 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "prices")
+@Table(name = "PRICES")
+@JsonIgnoreProperties(value = { "currency", "priority", "priceId" })
 public class Prices {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long priceId;
+	
 	private Long brandId;
+	
 	private Date startDate;
+	
 	private Date endDate;
+	
 	private Integer priceList;
+	
 	private Long productId;
+	
 	private Integer priority;
+	
 	private Double price;
+	
 	private String currency;
 	
 	public Long getPriceId() {

@@ -8,6 +8,6 @@ import com.product.ecommerce.persistence.Prices;
 
 public interface PricesRespository extends JpaRepository<Prices, Long> {
 	
-	public List<Prices> findByProductIdBrandIdOrderByPriceListAsc(Long productId, String brandId);
+	public List<Prices> findByProductIdAndBrandIdOrderByPriorityDesc(Long productId, Long brandId);
 
 }
