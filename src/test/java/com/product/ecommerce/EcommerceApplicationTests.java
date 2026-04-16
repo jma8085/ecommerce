@@ -21,7 +21,7 @@ class EcommerceApplicationTests {
 	
 	@Test
 	/**
-	 * Test - Use the service  with a bad format date
+	 * Test - Use service with a bad format date
 	 * @throws Exception Throw any unexpected error
 	 */
 	void dateFormatProductoInfoTest() throws Exception {
@@ -32,7 +32,7 @@ class EcommerceApplicationTests {
 	
 	@Test
 	/**
-	 * Test - Use the service  without required parameter 'date'
+	 * Test - Use service without required parameter 'date'
 	 * @throws Exception Throw any unexpected error
 	 */
 	void dateRequiredProductoInfoTest() throws Exception {		
@@ -43,7 +43,7 @@ class EcommerceApplicationTests {
 
 	@Test
 	/**
-	 * Test - Use the service  without required parameter 'brandId'
+	 * Test - Use service without required parameter 'brandId'
 	 * @throws Exception Throw any unexpected error
 	 */
 	void branIdRequiredProductoInfoTest() throws Exception {		
@@ -54,7 +54,7 @@ class EcommerceApplicationTests {
 	
 	@Test
 	/**
-	 * Test - Use the service  without required parameter 'productId'
+	 * Test - Use service without required parameter 'productId'
 	 * @throws Exception Throw any unexpected error
 	 */
 	void productIdRequiredProductoInfoTest() throws Exception {	
@@ -65,7 +65,7 @@ class EcommerceApplicationTests {
 	
 	@Test
 	/**
-	 * Test - Use the service  with a productId that not exists
+	 * Test - Use service with a productId that not exists
 	 * @throws Exception Throw any unexpected error
 	 */
 	void noContentByProductIdProductoInfoTest() throws Exception {	
@@ -75,7 +75,7 @@ class EcommerceApplicationTests {
 	
 	@Test
 	/**
-	 * Test - Use the service  with a brandId that not exists
+	 * Test - Use service with a brandId that not exists
 	 * @throws Exception Throw any unexpected error
 	 */
 	void noContentBybrandIdProductoInfoTest() throws Exception {	
@@ -85,7 +85,7 @@ class EcommerceApplicationTests {
 	
 	@Test
 	/**
-	 * Test - Use the service  with a date that not exists
+	 * Test - Use service with a date that not exists
 	 * @throws Exception Throw any unexpected error
 	 */
 	void noContentByDateProductoInfoTest() throws Exception {	
@@ -95,7 +95,7 @@ class EcommerceApplicationTests {
 	
 	@Test
 	/**
-	 * Test - Use the service with a query date 2020-06-14T10:00:00Z
+	 * Test - Use service with a query date 2020-06-14T10:00:00Z
 	 * @throws Exception Throw any unexpected error
 	 */
 	void getProductoInfoFrom14At10Test() throws Exception {
@@ -106,7 +106,7 @@ class EcommerceApplicationTests {
 
 	@Test
 	/**
-	 * Test - Use the service  with a query date 2020-06-14T16:00:00Z
+	 * Test - Use service with a query date 2020-06-14T16:00:00Z
 	 * @throws Exception Throw any unexpected error
 	 */
 	void getProductoInfoFrom14At16Test() throws Exception {		
@@ -117,7 +117,7 @@ class EcommerceApplicationTests {
 
 	@Test
 	/**
-	 * Test - Use the service  with a query date 2020-06-14T21:00:00Z
+	 * Test - Use service with a query date 2020-06-14T21:00:00Z
 	 * @throws Exception Throw any unexpected error
 	 */
 	void getProductoInfoFrom14At21Test() throws Exception {		
@@ -128,7 +128,7 @@ class EcommerceApplicationTests {
 
 	@Test
 	/**
-	 * Test - Use the service  with a query date 2020-06-15T10:00:00Z
+	 * Test - Use service with a query date 2020-06-15T10:00:00Z
 	 * @throws Exception Throw any unexpected error
 	 */
 	void getProductoInfoFrom15At10Test() throws Exception {				
@@ -140,7 +140,7 @@ class EcommerceApplicationTests {
 
 	@Test
 	/**
-	 * Test - Use the service  with a query date 2020-06-16T21:00:00Z
+	 * Test - Use service with a query date 2020-06-16T21:00:00Z
 	 * @throws Exception Throw any unexpected error
 	 */
 	void getProductoInfoFrom16At21Test() throws Exception {				

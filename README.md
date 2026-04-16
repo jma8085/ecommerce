@@ -18,7 +18,7 @@ Ecommerce has a service which you can read the price of the product
 
 **brandId:** Product brand identification number. This parameter is required
 
-**Example:** /ecommerce/api/productinfo?date=2020-04-10T10:00:00Z&productiId=35455&brnadId:1
+**Example:** /ecommerce/api/productinfo?date=2020-04-10T10:00:00Z&productId=35455&brandId:1
 
 #### Responses
 
