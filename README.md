@@ -6,9 +6,7 @@ Ecommerce has a service which you can read the price of the product
 
 ## Description SERVICE
 
-#### URI
-
-/ecommerce/api/productinfo
+**URI** => /ecommerce/api/productinfo
 
 #### Input Parameters
 
@@ -18,7 +16,9 @@ Ecommerce has a service which you can read the price of the product
 
 **brandId:** Product brand identification number. This parameter is required
 
-**Example:** /ecommerce/api/productinfo?date=2020-04-10T10:00:00Z&productId=35455&brandId:1
+**Example:** 
+
+curl -v "http://localhost:8080/ecommerce/api/productinfo?date=2020-06-14T10:00:00Z&productId=35455&brandId=1"
 
 #### Responses
 
@@ -47,4 +47,13 @@ The possible messages:
 - Parameter 'brandId' is required
 
 **- 204 - No Content:** When the query is accepted but there is not information related with this.
+
+
+
+## Execution Application
+
+- **Compile project** to execute JUnitTests => mvn clean install
+- **Execute application** => mvn spring-boot:run
+
+And test the above example => curl -v "http://localhost:8080/ecommerce/api/productinfo?date=2020-06-14T10:00:00Z&productId=35455&brandId=1"
 
