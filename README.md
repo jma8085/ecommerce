@@ -52,8 +52,11 @@ The possible messages:
 
 ## Execution Application
 
-- **Compile project** to execute JUnitTests => mvn clean install
-- **Execute application** => mvn spring-boot:run
+- **Required versions to build:** Maven 3.9 and Java 17
+
+- **Compile project** to build and execute JUnitTests => mvn clean install
+
+- **Execute and deploy application** => mvn spring-boot:run
 
 And test the above example => curl -v "http://localhost:8080/ecommerce/api/productinfo?date=2020-06-14T10:00:00Z&productId=35455&brandId=1"
 
