@@ -14,6 +14,11 @@ public class EcommerceExceptionHandler {
 	
 	@ExceptionHandler(MissingServletRequestParameterException.class)
     @ResponseBody
+    /**
+     * Catch MissingServletRequestParameterException to control the returned message
+     * @param ex Exception to catch
+     * @return The controlled HTTP-Response
+     */
     public ResponseEntity<String> handleMissingParams(MissingServletRequestParameterException ex) {
 		
 		List<String> paramsController = Arrays.asList("brandId", "date", "productId");
