@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.product.ecommerce.persistence.Prices;
-import com.product.ecommerce.repository.PricesRespository;
+import com.product.ecommerce.service.EcommerceService;
 
 import tools.jackson.databind.ObjectMapper;
 
@@ -26,7 +26,7 @@ public class EcommerceController {
 	private final ObjectMapper mapper = new ObjectMapper();
 	
 	@Autowired
-	PricesRespository pricesRepository;
+	EcommerceService ecommerceService;
 	
 	/**
 	 * Get the price of the product
@@ -44,11 +44,11 @@ public class EcommerceController {
 			return new ResponseEntity<>("Parameter 'date' is malformed.", HttpStatus.BAD_REQUEST);
 		}
 		
-		List<Prices> prices = pricesRepository.findByProductIdAndBrandIdOrderByPriorityDesc(productId, brandId);
-		Optional<Prices> selectPrices = prices.stream().filter(price -> dateIn.after(price.getStartDate()) && dateIn.before(price.getEndDate())).findFirst();
+		Prices prices = ecommerceService.getProductInfoPrice(dateIn, productId, brandId);
+
 		
-		if (selectPrices.isPresent()) {
-			return new ResponseEntity<>(mapper.writeValueAsString(selectPrices.get()), HttpStatus.OK);
+		if (prices != null) {
+			return new ResponseEntity<>(mapper.writeValueAsString(prices), HttpStatus.OK);
 		}
 		
 		return new ResponseEntity<>(HttpStatus.NO_CONTENT);
